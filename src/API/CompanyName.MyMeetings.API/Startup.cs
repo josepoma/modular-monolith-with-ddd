@@ -62,6 +62,8 @@ namespace CompanyName.MyMeetings.API
 
             services.AddSwaggerDocumentation();
 
+            services.AddCache(_configuration);
+
             ConfigureIdentityServer(services);
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
